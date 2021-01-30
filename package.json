@@ -20,7 +20,7 @@
   "scripts": {
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
-    "test": "stencil test --spec",
+    "test": "stencil test --spec --coverage",
     "test:watch": "stencil test --spec --watchAll",
     "generate": "stencil generate",
     "commit": "git-cz",
