@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>nc-img examples</title>
+
+    <script type="module" src="/build/nc-img.esm.js"></script>
+    <script nomodule src="/build/nc-img.js"></script>
+
+    <style type="text/css">
+      nc-img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 32px;
+        
+      }
+
+      .width {
+        width: 400px;
+        height: 700px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>nc-img - non-copyable images</h1>
+    <p>Custom component to create non-copyable HTML images.</p>
+
+    <!-- default state, full size -->
+    <nc-img
+      src="https://images.unsplash.com/photo-1611878583599-5a1ba474063b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3400&q=80"
+      alt="non-copyable image"
+    ></nc-img>
+
+    <!--
+      with data attributes
+      (will be applied to the img tag inside component)
+    -->
+    <nc-img
+      src="https://images.unsplash.com/photo-1611878583599-5a1ba474063b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3400&q=80"
+      alt="non-copyable image"
+      data-foo="bar"
+      data-testid="nc-img"
+    ></nc-img>
+
+    <!--
+      with width specified width/height
+      you must use the attribute `has-size="true"`
+    -->
+    <nc-img
+      class="width"
+      src="https://images.unsplash.com/photo-1611878583599-5a1ba474063b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3400&q=80"
+      alt="non-copyable image"
+      has-size="true"
+    ></nc-img>
+  </body>
+</html>
